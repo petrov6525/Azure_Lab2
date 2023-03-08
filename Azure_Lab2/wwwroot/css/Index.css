@@ -1,0 +1,14 @@
+﻿*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.index-grid{
+    display:grid;
+    grid-template-columns:1fr auto 1fr;
+}
+
+.image{
+    width:100%;
+}

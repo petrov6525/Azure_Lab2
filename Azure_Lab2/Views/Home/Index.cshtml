@@ -1,0 +1,38 @@
+﻿
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<link rel="stylesheet" href="~/css/Index.css"/>
+
+
+<div class="index-grid">
+    <div>
+        <form enctype="multipart/form-data" method="post" asp-action="UploadImage">
+            <p>Download the image</p>
+            <input type="file" required name="image"/>
+            <br />
+            <button type="submit">Save</button>
+        </form>
+    </div>
+
+    <div>
+        @if(ViewBag.images!=null)
+        {
+            foreach (var image in ViewBag.images)
+            {
+                <p>
+                    <a href="@image.Path" target="_blank">@image.Name</a>
+                </p>
+                    
+                
+            }
+        }
+    
+    </div>
+
+    
+
+</div>
+
